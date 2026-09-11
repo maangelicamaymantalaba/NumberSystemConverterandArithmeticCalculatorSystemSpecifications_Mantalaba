@@ -20,8 +20,11 @@ class Program
         List<InputNumber> inputs = RunConverter();
         RunCalculator(inputs);
 
-        Console.WriteLine("\nPress any key to exit...");
-        Console.ReadKey();
+        if (!Console.IsInputRedirected)
+        {
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
     }
 
     // =====================================================================
